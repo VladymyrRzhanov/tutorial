@@ -1,172 +1,172 @@
 .header {
-    padding-top: 6px;
-    background-color: #FFB8CA;
-        
-    @media screen and (min-width: 768px) {
+  padding-top: 6px;
+  background-color: #ffb8ca;
+
+  @media screen and (min-width: 768px) {
     padding-top: 37px;
-    }
+  }
 }
 
 .main-menu {
-    @include flex($justify-content:space-between);
+  @include flex($justify-content: space-between);
 }
 
 .page-nav {
-    @include flex($justify-content:space-between);
-    flex-grow: 1
+  @include flex($justify-content: space-between);
+  flex-grow: 1;
 }
 
-@media screen and (max-width:1279px) {
-    .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        padding: 93px 15px;
-        background: rgba(0, 0, 0, 0.2);
-        overflow-y: scroll;
-        opacity: 1;
-        @include transition(opacity);
-    
-        &--is-hidden {
-        opacity: 0;
-        pointer-events: none;
-        }
+@media screen and (max-width: 1279px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding: 93px 15px;
+    background: rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+    opacity: 1;
+    @include transition(opacity);
+
+    &--is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .mobile {
+    @include flex($align-items: flex-start, $justify-content: flex-start);
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 250px;
+    height: 100%;
+    min-height: 100vh;
+    padding: 60px 20px;
+    background-color: #e17992;
+    overflow: hidden;
+    @include transition(transform);
+
+    @media screen and (max-width: 479px) {
+      left: 50%;
+      transform: translate(-50%, 0);
     }
 
-    .mobile {
-        @include flex($align-items:flex-start, $justify-content:flex-start);
-        flex-direction: column;
-        position: absolute;
-        top: 0;
-        z-index: 2;
-        width: 250px;
-        height: 100%;
-        min-height: 100vh;
-        padding: 60px 20px;
-        background-color: #E17992;
-        overflow: hidden;
-        @include transition(transform);
-
-        @media screen and (max-width: 479px) {
-            left: 50%;
-            transform: translate(-50%,0);
-            
-        }
-    
-        @media screen and (min-width: 480px) {
-            right: 0;
-            transform: translateY(0);
-            
-        }
-
-        .menu--is-hidden & {
-            @media screen and (max-width: 479px) {
-                transform: translate(-50%,-100%);
-            }
-            @media screen and (min-width: 480px) {
-                transform: translateY(-100%);
-            }
-        }
+    @media screen and (min-width: 480px) {
+      right: 0;
+      transform: translateY(0);
     }
+
+    .menu--is-hidden & {
+      @media screen and (max-width: 479px) {
+        transform: translate(-50%, -100%);
+      }
+      @media screen and (min-width: 480px) {
+        transform: translateY(-100%);
+      }
+    }
+  }
 }
 
 .burger-menu {
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    @media screen and (min-width:1280px) {
-        display: none;
-    }
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 }
 
 .button-close {
-    position: absolute;
-    top: 23px;
-    right: 28px;
+  position: absolute;
+  top: 23px;
+  right: 28px;
 }
 
 .menu-nav {
-    @media screen and (min-width: 1280px) {
-        @include flex;
-    }
+  @media screen and (min-width: 1280px) {
+    @include flex;
+  }
 }
 
 .menu-item:not(:last-child) {
-    @media screen and (max-width: 1279px) {
-        margin-bottom: 23px;
-    }
-    @media screen and (min-width: 1280px) {
-        margin-right: 35px;
-    }
-    
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 23px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-right: 35px;
+  }
 }
 
 .menu-link {
-    position: relative;
-    @include font(700,14px,1.28,unset)
-    color: #FFFFFF;
-    @include transition(color);
-    @media screen and (min-width: 1280px) {
-        padding: 30px 0;
-        font-size: 16px;
-        line-height: 1.31;        
-    }
+  position: relative;
+  @include font(700, 14px, 1.28, unset) color: #ffffff;
+  @include transition(color);
+  @media screen and (min-width: 1280px) {
+    padding: 30px 0;
+    font-size: 16px;
+    line-height: 1.31;
+  }
 
-    &:hover, &:focus {
-        color: #D41443;
-    }
+  &:hover,
+  &:focus {
+    color: #d41443;
+  }
 
-    &:hover::after, &:focus::after {
-        opacity: 1;
-    }
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+  }
 }
 
 .link-current {
-    color: #D41443;
-    pointer-events:none;
+  color: #d41443;
+  pointer-events: none;
 }
 
-.menu-link::after {
+@media screen and (min-width: 1280px) {
+  .menu-link::after {
     content: "";
     position: absolute;
     bottom: -5px;
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #D41443;
+    background-color: #d41443;
     border-radius: 2px;
     opacity: 0;
     @include transition(opacity);
+  }
 }
 
 .button-mobile {
-    width: 100%;
-    margin-bottom: 32px;
-    @media screen and (min-width: 1279px) {
-        display: none;        
-    }
+  width: 100%;
+  margin-bottom: 32px;
+  @media screen and (min-width: 1279px) {
+    display: none;
+  }
 }
 
 .button-nav {
-    display: none;
-    @media screen and (min-width: 768px) {
-        @include flex;
-        width: 160px;
-        margin-left: 80px;
-    }
+  display: none;
+  @media screen and (min-width: 768px) {
+    @include flex;
+    width: 160px;
+    margin-left: 80px;
+  }
 }
 
 .button-nav::after {
-    position: relative;
-    top: 2px;
-    content: '';
-    width: 6px;
-    height: 10px;
-    margin-left: 12px;
-    background-image: url(../images/arrow.svg);
+  position: relative;
+  top: 2px;
+  content: "";
+  width: 6px;
+  height: 10px;
+  margin-left: 12px;
+  background-image: url(../images/arrow.svg);
 }
