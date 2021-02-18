@@ -1,18 +1,17 @@
 .header {
   position: absolute;
+  z-index: 1;
   width: 100%;
   left: 0;
   top: 0;
-  padding-top: 6px;
-  background-color: #ffb8ca;
-
-  @media screen and (min-width: 768px) {
-    padding-top: 37px;
-  }
 }
 
 .main-menu {
   @include flex($justify-content: space-between);
+  padding-top: 6px;
+  @media screen and (min-width: 768px) {
+    padding-top: 37px;
+  }
 }
 
 .page-nav {
