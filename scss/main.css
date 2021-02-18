@@ -389,6 +389,7 @@ img {
   height: 500px;
   margin: 0 auto;
   padding-top: 193px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -410,6 +411,7 @@ img {
 }
 
 .hero-content {
+  z-index: 1;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -632,6 +634,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .jug-img {
+    margin-bottom: 28px;
     width: 124px;
     height: 126px;
     background-image: url("../images/hero-tablet/jug-milk.png");
@@ -647,6 +650,7 @@ img {
 
 @media screen and (min-width: 768px) and (min-width: 1280px) {
   .jug-img {
+    margin-bottom: 45px;
     width: 188px;
     height: 191px;
     margin-right: 30px;
@@ -682,7 +686,7 @@ img {
   position: absolute;
   content: "";
   bottom: -75px;
-  left: 119px;
+  left: 81px;
   width: 171px;
   height: 410px;
   background-image: url("../images/hero-mobile/ice-cream.png");
@@ -697,6 +701,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .ice-cream::after {
+    bottom: -46px;
+    left: 71px;
     width: 143px;
     height: 336px;
     background-image: url("../images/hero-tablet/ice-cream.png");
@@ -712,6 +718,8 @@ img {
 
 @media screen and (min-width: 1280px) {
   .ice-cream::after {
+    bottom: -75px;
+    left: 119px;
     width: 236px;
     height: 557px;
     background-image: url("../images/hero-desktop/ice-cream.png");
@@ -751,6 +759,10 @@ img {
     width: 538px;
     height: 538px;
   }
+}
+
+.tasty {
+  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {
