@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+            integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+            crossorigin="anonymous" />
     <link rel="stylesheet" href="./scss/main.css">
     <title>Document</title>
 </head>
@@ -79,6 +85,80 @@
          </div>
      </div>
  </section>
+
+<section class="reviews">
+    <div class="container">
+        <ul class="comments">
+            <li>
+                <picture class="reviews-img">
+                    <source srcset="/images/reviews/customer1_webp_1x.webp 1x,
+                                                        /images/reviews/customer1_webp_2x.webp 2x" type="image/webp" />
+                    <img srcset="/images/reviews/customer1_1x.jpg 1x,
+                                                     /images/reviews/customer1_2x.jpg 2x"
+                        src="/images/reviews/customer1_1x.jpg" alt="photo of laughing woman" width="85" />
+                </picture>
+        
+                <p class="reviews-text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                    Aliquam sem. In hendrerit nulla quam nunc, accumsan
+                    congue. Lorem ipsum primis in nibh vel risus.
+                </p>
+                <p class="reviews-name">Emily, Los Angeles</p>
+            </li>
+            <li>
+                <picture class="reviews-img">
+                    <source srcset="/images/reviews/customer1_webp_1x.webp 1x,
+                                                        /images/reviews/customer1_webp_2x.webp 2x" type="image/webp" />
+                    <img srcset="/images/reviews/customer1_1x.jpg 1x,
+                                                     /images/reviews/customer1_2x.jpg 2x"
+                        src="/images/reviews/customer1_1x.jpg" alt="photo of laughing woman" width="85" />
+                </picture>
+        
+                <p class="reviews-text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                    Aliquam sem. In hendrerit nulla quam nunc, accumsan
+                    congue. Lorem ipsum primis in nibh vel risus.
+                </p>
+                <p class="reviews-name">Daisy, Washington</p>
+            </li>
+            <li>
+                <picture class="reviews-img">
+                    <source srcset="/images/reviews/customer1_webp_1x.webp 1x,
+                                                        /images/reviews/customer1_webp_2x.webp 2x" type="image/webp" />
+                    <img srcset="/images/reviews/customer1_1x.jpg 1x,
+                                                     /images/reviews/customer1_2x.jpg 2x"
+                        src="/images/reviews/customer1_1x.jpg" alt="photo of laughing woman" width="85" />
+                </picture>
+        
+                <p class="reviews-text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                    Aliquam sem. In hendrerit nulla quam nunc, accumsan
+                    congue. Lorem ipsum primis in nibh vel risus.
+                </p>
+                <p class="reviews-name">Elizabet, New York</p>
+            </li>
+        
+        </ul>
+        <ul class="buttons-list">
+            <li class="buttons-item">
+                <button type="button" class="home-button"></button>
+            </li>
+            <li class="buttons-item">
+                <button type="button" class="comments-button"></button>
+            </li>
+            <li class="buttons-item">
+                <button type="button" class="comments-button"></button>
+            </li>
+        </ul>
+        
+    </div>
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
+    integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+    crossorigin="anonymous"></script>
+    <script>$('.comments').slick({ dots: true, arrows: true});</script>
  <script src="./js/modal.js"></script>
     <script src="./js/burger-menu.js"></script>
 </body>
