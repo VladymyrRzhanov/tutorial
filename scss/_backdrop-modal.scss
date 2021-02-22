@@ -1,0 +1,95 @@
+/* Модальное окно */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding: 93px 15px;
+  background: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  opacity: 1;
+  @include transition(opacity);
+  @media screen and (max-width: 767px) {
+    padding: 93px 15px;
+  }
+  @media screen and (min-width: 768) {
+    padding: 93px 159px;
+  }
+
+  &--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  transform: scale(1);
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  @media screen and (max-width: 767px) {
+    position: relative;
+    left: 50%;
+    max-width: 450px;
+    max-height: 609px;
+    transform: translateX(-50%) scale(1);
+  }
+  @media screen and (min-width: 768px) {
+    left: 50%;
+    max-width: 450px;
+    max-height: 609px;
+    transform: translate(-50%) scale(1);
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-width: 528px;
+    min-height: 581px;
+  }
+
+  @include transition(transform);
+
+  &__title {
+    margin-bottom: 12px;
+    @include font(700, 20px, 1.5, 0.03em);
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .backdrop--is-hidden & {
+    transform: scale(0.8);
+    @media screen and (max-width: 767px) {
+      transform: translateX(-50%) scale(0.8);
+    }
+    @media screen and (min-width: 768px) {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+}
+
+.modal__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  fill: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  @include transition(fill);
+
+  &:hover,
+  &:focus {
+    fill: red;
+  }
+}
