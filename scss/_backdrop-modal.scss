@@ -30,27 +30,34 @@
   width: 100%;
   transform: scale(1);
   padding: 40px;
-  background: #fff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffdee7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+
+  background-image: linear-gradient(
+      rgba(255, 245, 246, 0.466),
+      rgba(255, 245, 246, 0.466)
+    ),
+    url(../images/icecream-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
   border-radius: 4px;
   @media screen and (max-width: 767px) {
     position: relative;
     left: 50%;
     max-width: 450px;
-    max-height: 609px;
     transform: translateX(-50%) scale(1);
   }
   @media screen and (min-width: 768px) {
     left: 50%;
     max-width: 450px;
-    max-height: 609px;
     transform: translate(-50%) scale(1);
   }
 
   @media screen and (min-width: 1280px) {
     min-width: 528px;
-    min-height: 581px;
   }
 
   @include transition(transform);
